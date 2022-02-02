@@ -1,4 +1,4 @@
-{:paths ["src" "resources"]
+{:paths ["src/clj" "resources"]
  :deps {org.clojure/clojure {:mvn/version "1.10.3"}
         hiccup/hiccup {:mvn/version "1.0.5"}
 
