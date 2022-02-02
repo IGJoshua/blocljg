@@ -1,0 +1,15 @@
+{:paths ["src" "resources"]
+ :deps {org.clojure/clojure {:mvn/version "1.10.3"}
+        hiccup/hiccup {:mvn/version "1.0.5"}
+
+        com.kiranshila/cybermonday {:mvn/version "0.4.158"}}
+
+ :aliases
+ {:dev {:extra-paths ["dev"]}
+
+  :test {:extra-paths ["test"]
+         :extra-deps {org.clojure/test.check {:mvn/version "1.1.1"}}}
+  :runner
+  {:extra-deps {io.github.cognitect-labs/test-runner {:git/tag "v0.5.0" :git/sha "b3fd0d2"}}
+   :main-opts ["-m" "cognitect.test-runner" "-d" "test"]
+   :exec-fn cognitect.test-runner.api/test}}}
